@@ -1,0 +1,27 @@
+version: v1.0.0
+
+dataset:
+  type: dtd
+
+  image_reader:
+    type: opencv
+    kwargs:
+      image_dir: ../all_data/Dataset/DTD_Synthetic
+      color_mode: RGB
+
+  train:
+    meta_file: ../all_data/Dataset/DTD_Synthetic/dtd_synthetic.csv
+    rebalance: False
+    hflip: False
+    vflip: False
+    rotate: False
+
+  test:
+    meta_file: ../all_data/Dataset/DTD_Synthetic/dtd_synthetic.csv
+
+  input_size: [448, 448] # [h, w]
+  crop_size: [448, 448]
+  pixel_mean: [0.485, 0.456, 0.406]
+  pixel_std: [0.229, 0.224, 0.225]
+  batch_size: 16
+  workers: 4 # number of workers of dataloader for each process

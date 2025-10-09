@@ -1,0 +1,44 @@
+mkdir -p ./nohup/2
+mkdir -p ./nohup/4
+mkdir -p ./nohup/8
+mkdir -p ./nohup/16
+
+echo "2" | nohup bash scripts/musc.sh > ./nohup/2/nohup.out 2> ./nohup/2/error.log &
+echo "4" | nohup bash scripts/musc.sh > ./nohup/4/nohup.out 2> ./nohup/4/error.log &
+echo "8" | nohup bash scripts/musc.sh > ./nohup/8/nohup.out 2> ./nohup/8/error.log &
+echo "16" | nohup bash scripts/musc.sh > ./nohup/16/nohup.out 2> ./nohup/16/error.log &
+
+python main.py -plt --resume output --nbr 9
+python main.py --cfg ./datasets/config_visa_dataset.yaml -plt --resume output --nbr 9
+python main.py --cfg ./datasets/config_bt_dataset.yaml -plt --resume output --nbr 9
+python main.py --cfg ./datasets/config_ci_dataset.yaml -plt --resume output --nbr 9
+ps aux | grep musc.sh
+ps aux | grep "python examples/musc_main.py"
+
+
+import os
+import sys
+import platform
+parent_dir = os.path.dirname(os.getcwd())
+sys.path.insert(0, parent_dir)
+
+# 查看 Python 版本
+print("Python Version:", sys.version)
+
+# 查看操作系统信息
+print("Operating System:", platform.system())
+print("OS Version:", platform.version())
+print("Platform:", platform.platform())
+
+# 查看当前工作目录
+print("Current Working Directory:", os.getcwd())
+
+# 查看环境变量
+print("Environment Variables:")
+for key, value in os.environ.items():
+    print(f"{key}: {value}")
+
+# 查看 sys.path
+print("\nCurrent sys.path:")
+for path in sys.path:
+    print(path)
