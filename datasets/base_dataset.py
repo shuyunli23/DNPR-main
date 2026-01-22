@@ -20,7 +20,7 @@ class BaseDataset(Dataset):
         super(BaseDataset, self).__init__()
 
     def __len__(self):
-        raise NotImplementedError   # 指示该部分代码尚未实现或需要在子类中进行实现
+        raise NotImplementedError 
 
     def __getitem__(self, idx):
         raise NotImplementedError
