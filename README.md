@@ -1,26 +1,20 @@
 # Official Implementation of DNPR
 
-## ⚠️ Repository Updating
-We are currently in the process of uploading the complete source code and configuration files corresponding to the revised manuscript. 
+> **🎉 News:** We are pleased to announce that **DNPR** has been accepted by **Expert Systems with Applications (ESWA)**!
 
-To ensure the code is "out-of-the-box" executable on standard environments, we are finalizing the dependency checks and path configurations.
+## 🚧 Repository Status: Code Refactoring
+We are currently organizing and cleaning the source code to align with the final accepted manuscript. The repository will be updated incrementally to ensure an "out-of-the-box" experience for the community.
 
-### 📢 Note to Reviewers
-The repository is being updated in two stages:
+### 📅 Release Roadmap
 
-#### 1. Immediate Updates (ETA: Within 48 Hours)
-Our primary focus right now is the clean release of the **DNPR core framework**.
-- **Core Logic:** The implementation of key modules (PMGR, NME, TPC) can currently be checked in the `lib/` directory.
-- **Inference:** A standardized one-click inference script for the main results will be pushed shortly.
+#### 1. Core Framework (Current Focus)
+The implementation of the main method is our priority.
+- **Core Logic:** Key modules (PMGR, NME, TPC) are currently available in the `lib/` directory.
+- **Inference:** A standardized inference script and configuration files will be released soon.
 
-If you encounter any issues running the current version, please check back in 1-2 days.
-
-#### 2. Roadmap & Future Releases (Ongoing)
-To further support the community and ensure reproducibility of our comparative study, we are also organizing and planning to release the following components **in subsequent updates**:
+#### 2. Extended Features (Planned)
+To facilitate future research and fair comparison, we also plan to release the following components in **subsequent updates**:
 - **Standardized Feature Extraction:** The custom ViT-L/14@336px extraction pipeline used in our experiments.
-- **Baseline Reproduction:** Our reimplementations/configurations for the comparison methods mentioned in the paper:
-    - [ ] WinCLIP & AnomalyCLIP
-    - [ ] MuSc (Batch-Processing Version)
-    - [ ] APRIL-GAN
+- **Baseline Implementations:** Scripts/Configs for comparison methods (e.g., WinCLIP, MuSc, APRIL-GAN).
 
-*These components will be progressively uploaded to facilitate fair comparison benchmarks.*
+*Thank you for your interest in our work!*
