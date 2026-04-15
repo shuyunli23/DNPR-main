@@ -1,0 +1,27 @@
+version: v1.0.0
+
+dataset:
+  type: btad
+
+  image_reader:
+    type: opencv
+    kwargs:
+      image_dir: ../all_data/Dataset/BTAD/BTech_Dataset_transformed
+      color_mode: RGB
+
+  train:
+    meta_file: ../all_data/Dataset/BTAD/BTech_Dataset_transformed/btad.csv
+    rebalance: False
+    hflip: False
+    vflip: False
+    rotate: False
+
+  test:
+    meta_file: ../all_data/Dataset/BTAD/BTech_Dataset_transformed/btad.csv
+
+  input_size: [336, 336] # [h, w]
+  crop_size: [336, 336]
+  pixel_mean: [0.485, 0.456, 0.406]
+  pixel_std: [0.229, 0.224, 0.225]
+  batch_size: 16
+  workers: 4 # number of workers of dataloader for each process
