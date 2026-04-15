@@ -201,11 +201,10 @@ Key configuration parameters in YAML files:
 | VisA | 87.3 | 96.3 | 84.8 |
 | BTAD | 94.3 | 96.7 | 76.6 |
 | CableInspect-AD | 88.2 | 95.6 | 85.5 |
-| DTD-Synthetic | 92.9 | 97.5 | 89.8 |
-| RAD | 95.3 | 95.1 | 89.8 |
+| DTD-Synthetic | 92.9 | 97.5 | 92.0 |
+| RAD | 95.3 | 95.1 | 85.7 |
 
 *Results may vary slightly depending on hardware and random seeds.*
-
 
 ### Qualitative comparison (%)
 
@@ -266,7 +265,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgements
 
-- [MVTec-AD](https://www.mvtec.com/company/research/datasets/mvtec-ad) for the benchmark dataset
 - [timm](https://github.com/huggingface/pytorch-image-models) for pretrained models
 - [PatchCore](https://github.com/amazon-science/patchcore-inspection) for inspiration
 
