@@ -84,8 +84,6 @@ DNPR/
 │       ├── prepare_btad.py
 │       ├── prepare_visa.py
 │       └── ...
-├── tests/
-│   └── ...
 ├── pyproject.toml
 ├── README.md
 ├── LICENSE
